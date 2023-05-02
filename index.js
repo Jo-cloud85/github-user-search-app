@@ -1,7 +1,6 @@
 $ (function() { //$( document ).ready(function() {}); is already deprecated
   $('#search-btn').on("click", () => {
 
-    const myKey = config.AUTH_KEY;
     const username = $('#search-input').val();
     const githubUrl = `https://api.github.com/users/${username}`;
 
@@ -10,7 +9,6 @@ $ (function() { //$( document ).ready(function() {}); is already deprecated
       type: 'GET',  
       headers: {
         'Accept': 'application/vnd.github+json',
-        'Authorization': `Bearer ${myKey}`,
         'X-GitHub-Api-Version': '2022-11-28'
       },
       dataType: "json",
