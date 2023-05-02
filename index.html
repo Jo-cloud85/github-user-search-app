@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./public/assets/favicon-32x32.png">
+  <title>GitHub user search app</title>
+  <link rel="stylesheet" href="./public/css/styles.css">
+  <link rel="stylesheet" href="./public/css/tablet.css">
+  <link rel="stylesheet" href="./public/css/desktop.css">
+</head>
+
+<body class="adaptive">
+  <main>
+    <header id="header">
+      <p id="app-title" class="adaptive">devfinder</p>
+      <div id="toggle-switch" class="adaptive">
+        <input type="checkbox" id="toggle">
+        <label for="toggle" id="mode" class="adaptive">Dark<img id="icon-mode" src="./public/assets/icon-moon.svg" alt="icon-mode"></label>
+      </div>
+    </header>
+
+    <div id="search-bar-container" class="adaptive">
+      <img src="./public/assets/icon-search.svg" alt="icon-search">
+      <div class="input-sub-container">
+        <input id="search-input" class="adaptive" type="text" placeholder="Search Github username...">
+        <p id="err-msg">No results</p>
+      </div>
+      <button type="submit" id="search-btn">Search</button>
+    </div>
+
+    <div id="search-results-container" class="adaptive">
+
+      <img id="profile-pic" src="https://avatars.githubusercontent.com/u/583231?v=4" alt="profile-pic">
+
+      <div id="profile-name-summary">
+        <p id="profile-name" class="adaptive">The Octocat</p>
+        <p id="profile-username">@octocat</p>
+        <p id="join-date" class="adaptive">Joined 25 Jan 2011</p>
+      </div>
+
+      <div id="bioAndOtherDetails">
+
+        <p id="bio-description" class="adaptive">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.</p>
+
+        <div id="bio-stats-container" class="adaptive">
+          <div>
+            <label class="adaptive">Repos</label>
+            <p class="num adaptive" id="repos">8</p>
+          </div>
+          <div>
+            <label class="adaptive">Followers</label>
+            <p class="num adaptive" id="followers">3938</p>
+          </div>
+          <div>
+            <label class="adaptive">Following</label>
+            <p class="num adaptive" id="following">9</p>
+          </div>
+        </div>
+
+        <div id="other-details-container">
+          <div class="details">
+            <img class="icon adaptive" src="./public/assets/icon-location.svg" alt="icon-location">
+            <p id="location" class="detail-text adaptive">San Francisco</p>
+          </div>
+          <div class="details">
+            <img class="icon adaptive" src="./public/assets/icon-website.svg" alt="icon-location">
+            <a href="https://github.blog/" target=”_blank” id="website" class="detail-text">https://github.blog</a>
+          </div>
+          <div class="details disable-link">
+            <img class="icon adaptive" src="./public/assets/icon-twitter.svg" alt="icon-twitter">
+            <a href="#" target=”_blank” id="twitter" class="detail-text adaptive">Not Available</a>
+          </div>
+          <div class="details">
+            <img class="icon adaptive" src="./public/assets/icon-company.svg" alt="icon-location">
+            <a href="https://github.com/github" target=”_blank” id="company" class="detail-text adaptive">@github</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script type="text/javascript" src="./config.js"></script>
+  <script type="text/javascript" src="./index.js"></script>
+</body>
+
+</html>

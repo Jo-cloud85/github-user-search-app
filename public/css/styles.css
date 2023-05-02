@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Space Mono', monospace;
+    font-weight: 400;
+}
+
+:root {
+    --white: hsla(0, 0%, 100%);
+    --whitish-blue: hsl(227, 100%, 98%);
+    --blue: hsl(212, 100%, 50%);
+    --blue-v2: hsl(212, 100%, 69%);
+    --gray: hsl(217, 20%, 51%);
+    --gray-trans: hsla(217, 20%, 51%, 0.2);
+    --grayish-blue: hsl(217, 35%, 45%);
+    --dark-blue: hsl(217, 21%, 21%);
+    --navy-blue: hsl(222, 41%, 20%);
+    --navy-blue-v2: hsl(222, 44%, 70%);
+    --dark-navy-blue: hsl(220, 40%, 13%);
+    --dark-navy-blue-v2: hsl(220, 18%, 16%);
+    --orange: hsl(0, 91%, 62%);
+}
+
+html {
+    --r140: calc((140 / var(--base) * 1rem));
+    --r117: calc((117 / var(--base) * 1rem));
+    --r100: calc((100 / var(--base) * 1rem));
+    --r70: calc((70 / var(--base) * 1rem));
+    --r38: calc((38 / var(--base) * 1rem));
+    --r25: calc((25 / var(--base) * 1rem));
+    --r21: calc((21 / var(--base) * 1rem));
+    --r20: calc((20 / var(--base) * 1rem));
+    --r18: calc((18 / var(--base) * 1rem));
+    --r15: calc((15 / var(--base) * 1rem));
+    --r14: calc((14 / var(--base) * 1rem));
+    --r12: calc((12 / var(--base) * 1rem));
+    --r10: calc((10 / var(--base) * 1rem));
+    --r7: calc((7 / var(--base) * 1rem));
+    --rH1_26: calc((26 / var(--base) * 1rem));
+    --rH2_22: calc((22 / var(--base) * 1rem));
+    --rH4_13: calc((13 / var(--base) * 1rem));
+    --base: 16;
+}
+
+/* ----------------- Overall structure ----------------- */
+body, main, header, #search-bar-container, #search-results-container {
+    display: grid;
+}
+
+body, main, #search-bar-container {
+    place-items: center;
+}
+
+body {
+    background-color: var(--whitish-blue);
+    width: 100vw;
+}
+
+main {
+    box-sizing: border-box;
+    margin: 2rem 1.5rem;
+}
+
+header, #search-bar-container, #search-results-container {
+    width: 100%;
+}
+
+#search-bar-container, 
+#search-results-container {
+    background-color: var(--white);
+    border-radius: var(--r15);
+    box-shadow: 0 0 1rem var(--gray-trans);
+    box-sizing: border-box;
+}
+
+/* ----------------------- Header --------------------- */
+header {
+    grid-template-columns: 1fr auto;
+    align-items: center;
+}
+
+#toggle-switch {
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+#toggle-switch:hover {
+    filter: brightness(30%);
+}
+
+input[type="checkbox"] {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+#icon-mode {
+    margin-bottom: -4px;
+    padding-left: var(--r12);
+}
+
+/* --------------- Search-bar container --------------- */
+
+#search-bar-container {
+    grid-template-columns: var(--r20) 1fr auto;
+    gap: 0.5rem;
+    padding: var(--r7) var(--r7) var(--r7) 1rem;
+    margin: 2.25rem 0 1rem 0;
+}
+
+#search-bar-container img {
+    width: var(--r20);
+}
+
+.input-sub-container {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    width: 100%;
+}
+
+#search-btn {
+    background-color: var(--blue);
+    border: none;
+    border-radius: var(--r10);
+    color: var(--white);
+    font-size: var(--r14);
+    font-weight: 700;
+    line-height: var(--r21);
+    letter-spacing: 0.1px;
+    padding: var(--r12) 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#search-btn:hover {
+    background-color: var(--blue-v2);
+}
+
+/* ------------- Search-results container ------------- */
+#search-results-container {
+    grid-template-areas: 
+    "a b"
+    "c c";
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+    column-gap: var(--r20);
+    padding: 2rem 1.5rem;
+}
+
+#search-results-container #profile-pic {
+    grid-area: a;
+    border-radius: 50%;
+    width: var(--r70);
+}
+
+#search-results-container #profile-name-summary {
+    grid-area: b;
+    width: auto;
+}
+
+#search-results-container #bioAndOtherDetails {
+    grid-area: c;
+    width: auto;
+}
+
+#bio-stats-container {
+    background-color: var(--whitish-blue);
+    border-radius: var(--r10);
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    padding: var(--r18) var(--r14);
+    text-align: center;
+}
+
+#other-details-container {
+    padding-top: 0.5rem ;
+}
+
+#other-details-container .details {
+    display: grid;
+    grid-template-columns: var(--r20) 1fr;
+    align-items: center;
+    gap: var(--r12);
+    padding-top: 1rem ;
+}
+
+#other-details-container .details .icon {
+    object-fit: contain;
+}
+
+/* ---------------------- Font ---------------------- */
+#app-title, #mode, #profile-name, #bio-stats-container .num {
+    font-weight: 700;
+}
+
+#app-title {
+    color: var(--dark-navy-blue-v2);
+    font-size: var(--rH1_26);
+    line-height: var(--r38);
+}
+
+#mode, #profile-username, #join-date, .detail-text {
+    font-size: var(--rH4_13);
+    line-height: var(--r20) ;
+}
+
+#mode {
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+}
+
+#mode, #bio-description, #bio-stats-container label, .detail-text {
+    color: var(--grayish-blue);
+}
+
+.input-sub-container input,
+.input-sub-container #err-msg, 
+#bio-description {
+    font-size: var(--rH4_13);
+    line-height: var(--r25);
+}
+
+.input-sub-container input {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+.input-sub-container input::placeholder {
+    color: var(--grayish-blue);
+    
+}
+
+.input-sub-container #err-msg {
+    color: var(--orange);
+    display: none;
+    font-weight: 700;
+}
+
+#profile-name, #bio-stats-container .num {
+    color: var(--dark-blue);
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+#profile-username {
+    color: var(--blue);
+}
+
+#join-date {
+    color: var(--gray);
+    padding-top: 6px;
+}
+
+#bio-description {
+    padding: 2rem 0 1.5rem 0;
+}
+
+#bio-stats-container label {
+    font-size: var(--r12);
+    line-height: 1rem;
+    padding-bottom: 0.5rem;
+}
+
+#website,
+#twitter,
+#company {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#website:hover,
+#twitter:hover,
+#company:hover {
+    text-decoration: underline;
+}
+
+.disable-link {
+    pointer-events: none;        
+    text-decoration: none;
+    opacity: 50%;
+}
+
+/* ------------------- Dark theme ------------------ */
+@media (prefers-color-scheme: dark) {
+    body.dark-theme.adaptive,
+    .dark-theme.adaptive #bio-stats-container {
+        background-color: var(--dark-navy-blue);
+    }
+
+    .dark-theme.adaptive #toggle-switch:hover {
+        opacity: 60%;
+        filter: brightness(100%);
+    }
+
+    .dark-theme.adaptive #search-bar-container, 
+    .dark-theme.adaptive #search-results-container {
+        background-color: var(--navy-blue);
+        box-shadow: none;
+    }
+
+    .dark-theme.adaptive .icon {
+        filter: brightness(500%) grayscale(100%);
+    }
+
+    /* ---------------- Dark theme Font ---------------- */
+    .dark-theme.adaptive #app-title, 
+    .dark-theme.adaptive #mode,
+    .dark-theme.adaptive #search-bar-container input,
+    .dark-theme.adaptive #search-bar-container input::placeholder,
+    .dark-theme.adaptive #profile-name, 
+    .dark-theme.adaptive #join-date, 
+    .dark-theme.adaptive #bio-description, 
+    .dark-theme.adaptive #bio-stats-container label, 
+    .dark-theme.adaptive #bio-stats-container .num,
+    .dark-theme.adaptive .detail-text {
+        color: var(--white);
+    }
+}

@@ -1,0 +1,109 @@
+@media screen and (min-width: 1201px) {
+    body {
+        height: 100vh;
+    }
+
+    main {
+        padding: 0;
+        width: 730px;
+    }
+
+    /* --------------- Search-bar container --------------- */
+    #search-bar-container {
+        grid-template-columns: 1.5rem 1fr auto;
+        gap: 1.5rem;
+        padding: var(--r10) var(--r10) var(--r10) 2rem;
+        margin: 2.25rem 0 1.5rem 0;
+    }
+
+    #search-bar-container img {
+        width: 1.5rem;
+    }
+
+    #search-btn {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding: var(--r12) 1.5rem;
+    }
+
+    /* ------------- Search-results container ------------- */
+    #search-results-container {
+        grid-template-areas: 
+        "a b"
+        "a c";
+        column-gap: var(--r38);
+        padding: 3rem;
+    }
+
+    #search-results-container #profile-pic {
+        width: var(--r117);
+    }
+
+    #profile-name-summary {
+        display: grid;
+        grid-auto-flow: column;
+        grid-template-areas: 
+        "a c"
+        "b b";
+        justify-content: space-between;
+    }
+
+    #bio-stats-container {
+        padding: var(--r15) 2rem;
+    }
+
+    #other-details-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-flow: column;
+        grid-template-areas:
+        "a c"
+        "b d";
+        padding-top: 1rem;
+    }
+
+    #other-details-container .details {
+        padding-top: var(--r10) ;
+    }
+
+    /* ---------------------- Font ---------------------- */
+    #mode, #profile-username, #join-date, .detail-text {
+        font-size: var(--r15);
+        line-height: 2rem;
+    }
+
+    #search-bar-container input,
+    #search-bar-container #err-msg {
+        font-size: var(--r18);
+        line-height: var(--r25);
+    }
+
+    #profile-name {
+        font-size: var(--rH1_26);
+        line-height: var(--r38);
+    }
+
+    #profile-username {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #join-date {
+        padding-top: 3px;
+    }
+
+    #bio-stats-container {
+        text-align: left;
+    }
+
+    #bio-stats-container .num {
+        font-size: var(--rH2_22);
+        line-height: 2rem;
+    }
+
+    #bio-description {
+        font-size: var(--r15);
+        line-height: var(--r25);
+        padding: var(--r20) 0 2rem 0;
+    }
+}
