@@ -5,7 +5,7 @@
 
     main {
         padding: 0;
-        width: 730px;
+        width: var(--r730);
     }
 
     /* --------------- Search-bar container --------------- */

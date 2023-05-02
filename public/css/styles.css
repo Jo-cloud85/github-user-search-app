@@ -24,6 +24,8 @@
 }
 
 html {
+    --r730: calc((730 / var(--base) * 1rem));
+    --r550: calc((550 / var(--base) * 1rem));
     --r140: calc((140 / var(--base) * 1rem));
     --r117: calc((117 / var(--base) * 1rem));
     --r100: calc((100 / var(--base) * 1rem));
@@ -56,6 +58,7 @@ body, main, #search-bar-container {
 body {
     background-color: var(--whitish-blue);
     width: 100vw;
+    height: 100vh;
 }
 
 main {
@@ -207,6 +210,7 @@ input[type="checkbox"] {
 }
 
 #mode {
+    cursor: pointer;
     letter-spacing: 2.5px;
     text-transform: uppercase;
 }

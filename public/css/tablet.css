@@ -1,6 +1,10 @@
-@media screen and (min-width: 481px) and (max-width: 1200px) {
+@media screen and (min-width: 601px) and (max-width: 1200px) {
+    body {
+        height: 100vh;
+    }
+    
     main {
-        margin: var(--r100);
+        width: var(--r550);
     }
 
     /* --------------- Search-bar container --------------- */
