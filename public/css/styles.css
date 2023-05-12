@@ -47,7 +47,7 @@ html {
 }
 
 /* ----------------- Overall structure ----------------- */
-body, main, header, #search-bar-container, #search-results-container {
+body, main, #header, #search-bar-container, #search-results-container {
     display: grid;
 }
 
@@ -57,7 +57,6 @@ body, main, #search-bar-container {
 
 body {
     background-color: var(--whitish-blue);
-    width: 100vw;
     height: 100vh;
 }
 
@@ -66,7 +65,7 @@ main {
     margin: 2rem 1.5rem;
 }
 
-header, #search-bar-container, #search-results-container {
+#header, #search-bar-container, #search-results-container {
     width: 100%;
 }
 
@@ -79,7 +78,7 @@ header, #search-bar-container, #search-results-container {
 }
 
 /* ----------------------- Header --------------------- */
-header {
+#header {
     grid-template-columns: 1fr auto;
     align-items: center;
 }
