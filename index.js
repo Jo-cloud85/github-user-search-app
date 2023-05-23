@@ -100,6 +100,15 @@ $ (function() { //$( document ).ready(function() {}); is already deprecated
   });
 });
 
+
+// For prefers-color-scheme
+$(window).on('load', function() {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      $('body').toggleClass('dark-theme');
+  }
+});
+
+
 // For toggling between light and dark mode
 $(function() {
   $("#toggle").click(() => {
